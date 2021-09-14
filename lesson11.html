@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>lesson 11 - Form Validation and other future HTML5 Form Enhancements</title>
+	<link rel="stylesheet" type="text/css" href="styleless11.css" media="all">
+</head>
+<body>
+	<ol>
+		<li><a href="getting_started.html">Home</a></li>
+		<li><a href="Creating_Forms.html">About</a></li>
+		<li><a href="Video.html">Contact</a></li>
+	</ol>
+	<h1>Creating Forms</h1>
+	<form method="POST" action="form.aspx">
+		<h2>Email</h2>
+		<p><label><span>Email Input:</span><input type="Email" name="emailinput" required></label></p>
+
+		<h2>Telephone</h2>
+		<p><label><span>Telephone Input:</span><input type="tel" name="telinput" required></label> the spec says the browser should.......</p>
+
+		<h2>URL</h2>
+		<p><label><span>URL Input:</span><input type="url" name="urlinput"></label></p>
+
+		<h2>Numeric Values</h2>
+		<p><label><span>Number Input:</span><input type="number" name="numberinput"></label></p>
+
+		<p><label><span>Range Input:</span><input type="range" name="rangeinput" value="42"></label>Value set to 42. By default, values between 1 and 100</p>
+
+		<h2>Data List</h2>
+		<p><label><span>Data List: </span>
+			<input type="text" list="someList">
+			<datalist id="someList">
+				<option label="First" value="First"></option>
+				<option label="Second" value="Second"></option>
+				<option label="Third" value="Third"></option>
+				<option label="forth" value="forth"></option>
+			</datalist></label></p>
+
+			<h2>Attributes</h2>
+			<p><label><span>autofocus: </span><input type="text" autofocus=""></label></p>
+			<p><label><span>pattern:</span><input type="text" pattern="^\d{5}{-\d{4})?$"></label>Hnint: Use a valid/invalid zip code</p>
+			<p><label><span>placeholder:</span><input type="text" placeholder="Hello World"></label></p>
+
+			<p><label><span>required: </span><input type="text" required></label></p>
+
+			<p><label><span>step:</span><input type="number" step="5"></label>Hint: Must be divisable by 5</p>
+
+		<p><button>Submit</button></p>
+	</form>
+</body>
+</html>

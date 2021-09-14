@@ -1,0 +1,25 @@
+span{
+	width: 150px;
+	display: block;
+	float: left;
+}
+input{
+	float: left;
+}
+p{
+	padding-top: 2px;
+	clear: all;
+}
+h2{
+	padding-top: 1px;
+	clear: all;
+}
+label{
+	padding-right: 10px;
+}
+button{
+	background-color: transparent;
+	font-size: 15px;
+	color: white;
+	background: grey;
+}
