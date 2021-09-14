@@ -1,0 +1,266 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/*@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}*/
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@-webkit-keyframes slide-animation{
+    0%{left:0px;}
+    10%{left:0px;}
+    20%{left:1200px;}
+    30%{left:1200px;}
+    40%{left:2400px;}
+    50%{left:2400px;}
+    60%{left:1200px;}
+    70%{left:1200px;}
+    80%{left:0px;}
+    90%{left:0px;}
+    100%{left:0px;}
+}
+
+.slide-images{
+    width: 3600px;
+    height: 800px;
+    margin: 0 0 0 -2400px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    -webkit-animation-duration: 33s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+p{
+    font-size: 20px;
+ }
+
+ footer {
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+}
+</style>
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="static/images/bedding.jpg" width="503" height="437" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="static/images/lobby.jpg" width="503" height="437" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="static/images/F_B.jpg" width="503" height="437" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <img src="static/images/tableskrit.jpg" width="503" height="437" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <img src="static/images/hotelroom.jpg" width="503" height="437" style="width:100%">
+</div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+</script>
+<p style="font-family:'Cambria'">We are from STAR NINE Linen Production establish since 2014. Currently, we are supplying up to 4.5 Star-rated hotels, private schools, offices, residentials (private, rent), restaurants, NGOs, factories and in many events too. So that, it is my pleasure to introduce about our products which is high quality with reasonable price and suitable for your needs. STAR NINE Software is mainly corporate with Singapore based company (SMRT Singapore) to provide advance creation and innovation type of software. We successfully design software or integrate local industries especially for garment industries as we successfully design for our valuable clients’ requirements. Our projects are spreading Not only South East Asia but also Asia, Middle East and Europe Countries.
+The avalible items from our production is as below:</p>
+<style>
+table,th,td{
+border: 1px solid black;
+}
+</style>
+<table style="width:100%">
+  <tr>
+    <th>Bedding Linen </th>
+    <th>Food and Beverage </th>
+    <th>Guest Room/Lobby </th>
+    <th>Uniform </th>
+    <th>Services </th>
+  </tr>
+  <tr>
+    <td>Bed Sheet</td>
+    <td>Table Cloth</td>
+    <td>Sofa Cover</td>
+    <td>Front Office</td>
+    <td>Recycling</td>
+  </tr>
+  <tr>
+    <td>Pillow</td>
+    <td>Table Skirt</td>
+    <td>Decorated Pillow</td>
+    <td>F & B Uniform</td>
+    <td>Software Solution</td>
+  </tr>
+  <tr>
+    <td>Pillow Case</td>
+    <td>Napkin</td>
+    <td>Decorated Pillow Case</td>
+    <td>Chef Coat</td>
+    <td>Software Support</td>
+  </tr>
+  <tr>
+    <td>Duvet</td>
+    <td>Curtain</td>
+    <td>Table Runner</td>
+    <td>Apron</td>
+    <td>Free Linen Advisory</td>
+  </tr>
+  <tr>
+    <td>Divan Skirt</td>
+    <td>Liquid Soap</td>
+    <td>Chair Cover</td>
+    <td>Housekeeping Uniform</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Bloster Case</td>
+    <td>Table Runner</td>
+    <td>Curtain(Day/Night)</td>
+    <td>Office Uniform</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Bed Runner</td>
+    <td>Plat Mat</td>
+    <td></td>
+    <td>Bell Boy Uniform</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Decorated Pillow</td>
+    <td>Chair Cover</td>
+    <td></td>
+    <td>Security Uniform</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Decorated Pillow Case</td>
+    <td>Chair Ribbon</td>
+    <td></td>
+    <td>Sport Shirt</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Towel</td>
+    <td></td>
+    <td></td>
+    <td>Embrodiery</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Curtain(Day/Night)</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+<footer>
+  <p>Author: STAR NINE PRODUCTION<br>
+</footer>
+{% endblock %}
